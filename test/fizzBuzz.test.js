@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 
-import  FizzBuzz  from '../fizzbuzz';
+import  FizzBuzz  from '../fizzBuzz';
 
 
 describe('check if number matches to fizz, buzz or fizzbuzz', () => {

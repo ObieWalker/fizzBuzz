@@ -13,7 +13,7 @@ describe('check if number matches to fizz, buzz or fizzbuzz', () => {
   it('should return fizzbuzz when the input is a multiple of 3 and 5', () => {
     assert.deepEqual(FizzBuzz(15), 'FizzBuzz')
   });
-  it('should ask for a number if input is a string', () => {
+  it('should ask for a number if input is not a number', () => {
    assert.deepEqual(FizzBuzz('safd'), 'Please enter a number')
   });
   it('should request an integer when the user enters a float', () => {

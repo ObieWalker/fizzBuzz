@@ -11,7 +11,7 @@ describe('check if number matches to fizz, buzz or fizzbuzz', () => {
     assert.deepEqual(FizzBuzz(10), 'buzz')
   });
   it('should return fizzbuzz when the input is a multiple of 3 and 5', () => {
-    assert.deepEqual(FizzBuzz(15), 'FizzBuzz')
+    assert.deepEqual(FizzBuzz(15), 'Fizzbuzz')
   });
   it('should ask for a number if input is not a number', () => {
    assert.deepEqual(FizzBuzz('safd'), 'Please enter a number')

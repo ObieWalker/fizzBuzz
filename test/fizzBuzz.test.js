@@ -1,33 +1,31 @@
 import { assert } from 'chai';
 
-import  Fizzbuzz  from '../fizzbuzz';
+import  FizzBuzz  from '../fizzbuzz';
 
 
 describe('check if number matches to fizz, buzz or fizzbuzz', () => {
-  it('should request for a number as input when user enters string', () => {
-   assert.deepEqual(FizzBuzz('ppp'), 'Please enter a number')
-  })
-  it('should return fizz when user enters 9 a multiple of 3 as input ', () => {
-    assert.deepEqual(FizzBuzz(9), 'fizz')
+  it('should return fizz when the input is 6', () => {
+    assert.deepEqual(FizzBuzz(6), 'fizz')
   });
-  it('should return buzz when user enters 10 a multiples of 5 as input', () => {
+  it('should return fizz when the input is 10', () => {
     assert.deepEqual(FizzBuzz(10), 'buzz')
   });
-  it('should return fizzbuzz when a user enters a number that is both multiples\
-   of 3 and 5', () => {
-    assert.deepEqual(FizzBuzz(30), 'FizzBuzz')
+  it('should return fizzbuzz when the input is a multiple of 3 and 5', () => {
+    assert.deepEqual(FizzBuzz(15), 'FizzBuzz')
   });
-  it('should return a message when user enters a negative integer', () => {
-    assert.deepEqual(FizzBuzz(-9), 'Number must be positive')
+  it('should ask for a number if input is a string', () => {
+   assert.deepEqual(FizzBuzz('safd'), 'Please enter a number')
   });
-  it('should return number when user enters a number that is not a\
-    multiple of 3 or 5', () => {
-    assert.deepEqual(FizzBuzz(26), 26)
-  });
-  it('should return number when user a enter a float number', () => {
-    assert.deepEqual(FizzBuzz(4.3), 4.3)
+  it('should request an integer when the user enters a float', () => {
+    assert.deepEqual(FizzBuzz(1.4), 'Please enter a number')
   })
-  it('should return a message when the user input is null or undefined', () => {
+  it('should return a message when the input is less than 1', () => {
+    assert.deepEqual(FizzBuzz(-1), 'Number can only be positive')
+  });
+  it('should return the input when the user enters a nummber that is neither a multiple of 3 or 5', () => {
+    assert.deepEqual(FizzBuzz(44), 44)
+  });
+  it('should return a message the input is null or undefined', () => {
     assert.deepEqual(FizzBuzz(" "), 'Please enter a number')
   });
 })

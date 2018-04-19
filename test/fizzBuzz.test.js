@@ -16,9 +16,6 @@ describe('check if number matches to fizz, buzz or fizzbuzz', () => {
   it('should ask for a number if input is not a number', () => {
    assert.deepEqual(FizzBuzz('safd'), 'Please enter a number')
   });
-  it('should request an integer when the user enters a float', () => {
-    assert.deepEqual(FizzBuzz(1.4), 'Please enter a number')
-  })
   it('should return a message when the input is less than 1', () => {
     assert.deepEqual(FizzBuzz(-1), 'Number can only be positive')
   });
